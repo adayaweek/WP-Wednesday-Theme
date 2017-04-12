@@ -107,7 +107,11 @@ add_action( 'widgets_init', 'wednesday_widgets_init' );
 function wednesday_scripts() {
 	wp_enqueue_style( 'wednesday-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'wednesday-bootstrap-style', get_template_directory_uri().'/css/bootstrap.css' );
+
 	wp_enqueue_script( 'wednesday-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'wednesday-bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '20151215', true );
 
 	wp_enqueue_script( 'wednesday-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
